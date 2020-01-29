@@ -1,0 +1,19 @@
+.app {
+    background: #303030;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    background: #535353;
+    height: 50px;
+}
+
+.logo {
+    padding: 15px;
+}
+
+.logo-icon {
+    padding: 11px;
+    padding-right: 0;
+}
