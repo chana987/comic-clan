@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import Book from './Book'
 import ComicClanContext from '../context/comicClan/comicClanContext'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const Grid = styled.div`
@@ -33,6 +34,11 @@ const Group = ({ group, groupName }) => {
             </Grid>
         </div>
     )
+}
+
+Group.propTypes = {
+    group: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    groupName: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
 
 export default Group

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import ComicClanContext from '../context/comicClan/comicClanContext'
 
 const Button = styled.p`
@@ -28,12 +29,16 @@ const Category = ({ name }) => {
     const { changeCategory, category, loading } = comicClanContext
 
     const callChangeCategory = () => {
-       changeCategory(name)
-      }
+        changeCategory(name)
+    }
 
     return (
         <Button style={name === category ? active : null} onClick={callChangeCategory}>{name}</Button>
     )
+}
+
+Category.propTypes = {
+    name: PropTypes.string.isRequired
 }
 
 export default Category
