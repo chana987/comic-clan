@@ -2,18 +2,7 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import ComicClanContext from '../context/comicClan/comicClanContext'
-
-const Button = styled.p`
-    color:  #777777;
-    display: inline-block;
-    padding: 0 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: capitalize;
-    text-align: center;
-    cursor: pointer;
-`
+import { Button } from './styledComponents/StyledText'
 
 const active = {
     background: '#F15454',

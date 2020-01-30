@@ -67,9 +67,12 @@ const ComicClanState = props => {
     }
 
     // get book
-    const getBook = async (name) => {
+    const getBook = (name) => {
         setLoading()
-        let book = state.books.filter(b => b.name === name)
+        let book = state.books.find(b => b.name.includes(name))
+        console.log(book)
+        console.log(state.books)
+        console.log(name)
 
         dispatch({
             type: GET_BOOK,

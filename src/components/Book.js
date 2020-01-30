@@ -9,22 +9,17 @@ import { Title, LabelText, NameText } from './styledComponents/StyledText'
 const Book = ({ book }) => {
     const comicClanContext = useContext(ComicClanContext)
 
-    const { getBook, currentBook } = comicClanContext
-
-    const changeCurrentBook = () => {
-        getBook(book)
-        console.log(currentBook)
-    }
+    const { name, image, owner } = book
 
     return (
-        <Link to={`/book/${book.name}`} onClick={changeCurrentBook} style={{ textDecoration: 'none' }}>
-            <Image image={book.image} />
+        <Link to={`/book/${name}`} style={{ textDecoration: 'none' }}>
+            <Image image={image} />
             <div>
-                <Title>{book.name}</Title>
+                <Title>{name}</Title>
             </div>
             <div>
                 <LabelText>Owned By </LabelText>
-                <NameText>{book.owner}</NameText>
+                <NameText>{owner}</NameText>
             </div>
         </Link>
     )

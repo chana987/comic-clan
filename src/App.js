@@ -11,25 +11,22 @@ import {
 import book from './assets/book.png'
 import logo from './assets/logo.png'
 import ComicClanState from './context/comicClan/comicClanState'
-import AlertState from './context/alert/AlertState'
 
 function App() {
   return (
     <ComicClanState>
-      <AlertState>
-        <Router>
-          <header>
-            <img src={book} alt="" className="logo-icon" />
-            <img src={logo} alt="" className="logo" />
-          </header>
-          <div className="app">
-            <Switch>
-              <Route exact path="/catalog" component={Catalog} />
-              <Route exact path="/book/:name" component={BookDetail} />
-            </Switch>
-          </div>
-        </Router>
-      </AlertState>
+      <Router>
+        <header>
+          <img src={book} alt="" className="logo-icon" />
+          <img src={logo} alt="" className="logo" />
+        </header>
+        <div className="app">
+          <Switch>
+            <Route exact path="/catalog" component={Catalog} />
+            <Route exact path="/book/:name" component={BookDetail} />
+          </Switch>
+        </div>
+      </Router>
     </ComicClanState>
   )
 }
