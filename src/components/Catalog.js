@@ -2,7 +2,6 @@ import React, { useEffect, useContext } from 'react'
 import Search from './Search'
 import Group from './Group'
 import Category from './Category'
-import styled from 'styled-components'
 import ComicClanContext from '../context/comicClan/comicClanContext'
 
 const Catalog = () => {

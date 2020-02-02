@@ -1,5 +1,7 @@
 import React, { useContext, useState } from 'react'
 import ComicClanContext from '../context/comicClan/comicClanContext'
+import { SearchForm, SearchInput, SearchButton } from './styledComponents/StyledSearch'
+import SearchIcon from '../assets/search.png'
 
 const Search = () => {
     const comicClanContext = useContext(ComicClanContext)
@@ -8,6 +10,7 @@ const Search = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
+        console.log(e.target.closest(".form"))
         
         comicClanContext.searchBooks(text);
         setText('')
@@ -17,16 +20,18 @@ const Search = () => {
 
     return (
         <div>
-            <form onSubmit={onSubmit} className="form">
-                <input type="text"
+            <SearchForm onSubmit={onSubmit}
+                className="form">
+                <SearchButton type="submit" onClick={onSubmit}>
+                    <img src={SearchIcon} alt="" style={{ height: '1.5rem' }} />
+                </SearchButton> 
+                <SearchInput type="text"
                     name="text"
                     placeholder="Search by book name"
                     value={text}
-                    onChange={onChange} />
-                <input type="submit"
-                    value="Search"
-                    className="" />
-            </form>
+                    onChange={onChange}
+                    autoComplete="off" />
+            </SearchForm>
         </div>
     )
 }

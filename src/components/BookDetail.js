@@ -6,59 +6,53 @@ import leftArrow from '../assets/back.png'
 import starGold from '../assets/star-gold.png'
 import starGrey from '../assets/star-grey.png'
 import { BigImage } from './styledComponents/StyledImage'
-import { BookDiv } from './styledComponents/StyledLayout'
+import { BookDiv, StarGrid } from './styledComponents/StyledLayout'
 import { LinkText, BigTitle, LabelText, NameText, PText } from './styledComponents/StyledText'
 
-const BookDetail = ({ match }) => {
+const BookDetail = (props) => {
     const comicClanContext = useContext(ComicClanContext)
     
-    const { getBook, currentBook, loading } = comicClanContext
+    const { currentBook, category, loading } = comicClanContext
 
-    useEffect(() => {
-        getBook(match.params.name)
-        console.log(match.params.name)
-        console.log(currentBook)
-        // eslint-disable-next-line
-    }, [])
 
-    // const { name, image, year, rating, writer, artist, publication, owner, summary } = currentBook
+    const { name, image, year, rating, writer, artist, publication, owner, summary } = currentBook
 
     return (
         <div>
-            <Link to="/catalog" >
+            <Link to={`/catalog/${category}`} >
                 <img src={leftArrow} />
                 <LinkText>Back to collection</LinkText>
             </Link>
             <BookDiv>
-                {/* <BigImage image={image} /> */}
+                <BigImage src={image} />
                 <div>
                     <div>
-                        {/* <BigTitle>{name} ({year})</BigTitle> */}
-                        <div style={{ paddingLeft: '2rem', display: 'inline-block' }}>
-                            {/* <img src={rating > 0 ? starGold : starGrey} />
+                        <BigTitle>{name} ({year})</BigTitle>
+                        <StarGrid>
+                            <img src={rating > 0 ? starGold : starGrey} />
                             <img src={rating > 1 ? starGold : starGrey} />
                             <img src={rating > 2 ? starGold : starGrey} />
                             <img src={rating > 3 ? starGold : starGrey} />
-                            <img src={rating > 4 ? starGold : starGrey} /> */}
-                        </div>
+                            <img src={rating > 4 ? starGold : starGrey} />
+                        </StarGrid>
                     </div>
                     <div>
                         <LabelText>Writer: </LabelText>
-                        {/* <NameText>{writer}</NameText> */}
+                        <NameText>{writer}</NameText>
                     </div>
                     <div>
                         <LabelText>Artist: </LabelText>
-                        {/* <NameText>{artist}</NameText> */}
+                        <NameText>{artist}</NameText>
                     </div>
                     <div>
                         <LabelText>Publication: </LabelText>
-                        {/* <NameText>{publication}</NameText> */}
+                        <NameText>{publication}</NameText>
                     </div>
                     <div>
                         <LabelText>Owner: </LabelText>
-                        {/* <NameText>{owner}</NameText> */}
+                        <NameText>{owner}</NameText>
                     </div>
-                    {/* <PText>{summary}</PText> */}
+                    <PText>{summary}</PText>
                 </div>
             </BookDiv>
             <div>

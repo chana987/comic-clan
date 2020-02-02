@@ -1,16 +1,8 @@
 import React, { useContext } from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import ComicClanContext from '../context/comicClan/comicClanContext'
-import { Button } from './styledComponents/StyledText'
-
-const active = {
-    background: '#F15454',
-    borderRadius: '19px',
-    boxShadow: '0px 2px 3px rgba(34, 34, 34, 0.6)',
-    color: '#FFFFFF',
-    padding: '6px 20px'
-}
+import { MenuButton } from './styledComponents/StyledText'
 
 const Category = ({ name }) => {
     const comicClanContext = useContext(ComicClanContext)
@@ -22,7 +14,13 @@ const Category = ({ name }) => {
     }
 
     return (
-        <Button style={name === category ? active : null} onClick={callChangeCategory}>{name}</Button>
+        <Link to={`/catalog/${name}`}>
+            <MenuButton
+                class={name === category ? 'active' : null}
+                onClick={callChangeCategory}>
+                {name}
+            </MenuButton>
+        </Link>
     )
 }
 

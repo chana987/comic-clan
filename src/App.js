@@ -5,8 +5,7 @@ import BookDetail from './components/BookDetail'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom"
 import book from './assets/book.png'
 import logo from './assets/logo.png'
@@ -22,7 +21,8 @@ function App() {
         </header>
         <div className="app">
           <Switch>
-            <Route exact path="/catalog" component={Catalog} />
+            <Route exact path="/" component={Catalog} />
+            <Route exact path="/catalog/:category" component={Catalog} />
             <Route exact path="/book/:name" component={BookDetail} />
           </Switch>
         </div>
