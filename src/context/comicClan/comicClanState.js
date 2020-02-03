@@ -24,7 +24,11 @@ const ComicClanState = props => {
             text}` : `https://comicclan.vett.io/comics`
 
         const res = await axios.get(url, { headers: { Authorization: "Bearer ComicClanVettIO2019" } })
-        getGroups(state.category, res.data)
+
+        let pageUrl = window.location.href.replace("http://localhost:3000/catalog/", "")
+        getGroups(pageUrl, res.data)
+        changeCategory(pageUrl)
+
         dispatch({
             type: SEARCH_BOOKS,
             payload: res.data
@@ -33,7 +37,7 @@ const ComicClanState = props => {
 
     const changeCategory = async (category = 'year') => {
         setLoading()
-        getGroups(category, state.books)
+        // getGroups(category, state.books)
 
         dispatch({
             type: CHANGE_CATEGORY,
@@ -83,6 +87,7 @@ const ComicClanState = props => {
             searchBooks,
             changeCategory,
             getBook,
+            getGroups,
             toggleMenu
         }}>
         {props.children}

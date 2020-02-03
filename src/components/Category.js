@@ -7,10 +7,12 @@ import { MenuButton } from './styledComponents/StyledText'
 const Category = ({ name }) => {
     const comicClanContext = useContext(ComicClanContext)
 
-    const { changeCategory, category } = comicClanContext
+    const { changeCategory, category, getGroups, books, toggleMenu } = comicClanContext
 
     const callChangeCategory = () => {
         changeCategory(name)
+        getGroups(name, books)
+        toggleMenu()
     }
 
     return (

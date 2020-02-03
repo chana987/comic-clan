@@ -2,13 +2,13 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ComicClanContext from '../context/comicClan/comicClanContext'
 import Group from './Group'
+import Loading from './Loading'
 import leftArrow from '../assets/back.png'
 import starGold from '../assets/star-gold.png'
 import starGrey from '../assets/star-grey.png'
 import { BigImage } from './styledComponents/StyledImage'
 import { BookDiv, StarGrid } from './styledComponents/StyledLayout'
 import { LinkText, BigTitle, LabelText, NameText, PText } from './styledComponents/StyledText'
-import Loading from './Loading'
 
 const BookDetail = (props) => {
     const comicClanContext = useContext(ComicClanContext)

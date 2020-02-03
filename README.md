@@ -25,6 +25,9 @@ An online library of comic books for ComicClan, an online community of comic boo
 ### Technologies
 
 - React
-- 
+- React Hooks and Context
+- Styled-Components
+- Axios
+- React-Router-Browser
 
 The [Vett.io](https://vett.io) Team.

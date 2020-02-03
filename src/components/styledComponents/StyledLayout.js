@@ -8,7 +8,7 @@ export const BookDiv = styled.div`
     padding: 3rem 0;
 
     @media only screen and (max-width: 450px) {
-        grid-gap: 3rem;
+        display: block;
         margin: 0.8rem auto;
         padding-bottom: 2rem;
     }

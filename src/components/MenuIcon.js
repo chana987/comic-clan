@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import '../styles/Menu.css'
 import ComicClanContext from '../context/comicClan/comicClanContext'
 import { IconDiv, Bar } from './styledComponents/StyledMenu'
 
