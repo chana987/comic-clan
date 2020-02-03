@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactLoading from 'react-loading'
 
-const Loading = ({ type="cubes", color="#F15454" }) => {
+const Loading = ({ type = "cubes", color = "#F15454" }) => {
     return (
-        <ReactLoading type={type} color={color} height={10} width={50} />
+        <div style={{margin: '40vh auto', width: '50px'}}>
+            <ReactLoading type={type} color={color} height={10} width={50} />
+        </div>
     )
 }
 
