@@ -64,7 +64,7 @@ export const MenuButton = styled(Text)`
     margin: 1.4rem 0;
 
     ${props => {
-    if (props.class) {
+    if (props.active) {
         return `
             background: #F15454;
             border-radius: 1.2rem;

@@ -8,7 +8,7 @@ import { BigTitle } from './styledComponents/StyledText'
 const Group = ({ group, groupName }) => {
     const comicClanContext = useContext(ComicClanContext)
 
-    const { category, books, loading } = comicClanContext
+    const { category, books } = comicClanContext
 
     return (
         <div>

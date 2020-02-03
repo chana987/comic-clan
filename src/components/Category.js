@@ -7,7 +7,7 @@ import { MenuButton } from './styledComponents/StyledText'
 const Category = ({ name }) => {
     const comicClanContext = useContext(ComicClanContext)
 
-    const { changeCategory, category, loading } = comicClanContext
+    const { changeCategory, category } = comicClanContext
 
     const callChangeCategory = () => {
         changeCategory(name)
@@ -16,7 +16,7 @@ const Category = ({ name }) => {
     return (
         <Link to={`/catalog/${name}`}>
             <MenuButton
-                class={name === category ? 'active' : null}
+                active={name === category ? 'active' : null}
                 onClick={callChangeCategory}>
                 {name}
             </MenuButton>

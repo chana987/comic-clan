@@ -6,6 +6,12 @@ export const BookDiv = styled.div`
     grid-template-columns: min-content 1fr;
     border-bottom: 1px solid #535353;
     padding: 3rem 0;
+
+    @media only screen and (max-width: 450px) {
+        grid-gap: 3rem;
+        margin: 0.8rem auto;
+        padding-bottom: 2rem;
+    }
 `
 
 export const StyledGrid = styled.div`
@@ -18,6 +24,8 @@ export const StyledGrid = styled.div`
 
     @media only screen and (max-width: 600px) {
         grid-gap: 3rem;
+        margin: 0.8rem auto;
+        padding-bottom: 2rem;
     }
     @media only screen and (max-width: 250px) {
         grid-template-columns: 1fr;

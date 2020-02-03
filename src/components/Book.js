@@ -18,7 +18,7 @@ const Book = ({ book }) => {
         <Link to={`/book/${name}`}
             style={{ textDecoration: 'none' }}
             onClick={changeCurrentBook}>
-            <Image src={image} />
+            <Image src={image} alt="" />
             <div>
                 <Title>{name}</Title>
             </div>

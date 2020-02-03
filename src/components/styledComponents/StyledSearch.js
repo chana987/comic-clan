@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
-export const SearchForm = styled.div`
+export const SearchForm = styled.form`
     display: grid;
+    width: 100%;
     grid-template-columns: 3.4rem 1fr;
     border: 3px solid #777777;
     box-sizing: border-box;
@@ -9,8 +10,14 @@ export const SearchForm = styled.div`
     padding: 0.8rem;
     outline: none;
 
-    @media(max-width: ) {
-        
+    @media(max-width: 350px) {
+        display: inline-grid;
+        border: none;
+        border-bottom: 2px solid #777777;
+        border-radius: 0;
+        padding-bottom: 0.3rem;
+        width: 70vw;
+        margin-bottom: 3rem;
     }
 `
 

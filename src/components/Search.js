@@ -10,8 +10,7 @@ const Search = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log(e.target.closest(".form"))
-        
+
         comicClanContext.searchBooks(text);
         setText('')
     }
@@ -19,20 +18,18 @@ const Search = () => {
     const onChange = (e) => setText(e.target.value);
 
     return (
-        <div>
-            <SearchForm onSubmit={onSubmit}
-                className="form">
-                <SearchButton type="submit" onClick={onSubmit}>
-                    <img src={SearchIcon} alt="" style={{ height: '1.5rem' }} />
-                </SearchButton> 
-                <SearchInput type="text"
-                    name="text"
-                    placeholder="Search by book name"
-                    value={text}
-                    onChange={onChange}
-                    autoComplete="off" />
-            </SearchForm>
-        </div>
+        <SearchForm onSubmit={onSubmit}
+            className="form">
+            <SearchButton type="submit">
+                <img src={SearchIcon} alt="" style={{ height: '1.5rem' }} />
+            </SearchButton>
+            <SearchInput type="text"
+                name="text"
+                placeholder="Search by book name"
+                value={text}
+                onChange={onChange}
+                autoComplete="off" />
+        </SearchForm>
     )
 }
 

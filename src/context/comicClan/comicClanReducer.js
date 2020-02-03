@@ -1,5 +1,5 @@
 import {
-    SEARCH_BOOKS, GET_BOOK, CHANGE_CATEGORY, SET_LOADING, GET_GROUPS
+    SEARCH_BOOKS, GET_BOOK, CHANGE_CATEGORY, SET_LOADING, GET_GROUPS, TOGGLE_MENU
 } from '../types'
 
 export default (state, action) => {
@@ -26,6 +26,12 @@ export default (state, action) => {
             return {
                 ...state,
                 groups: action.payload,
+                loading: false
+            }
+        case TOGGLE_MENU: 
+            return {
+                ...state,
+                menu: action.payload,
                 loading: false
             }
         case SET_LOADING:

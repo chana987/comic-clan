@@ -3,7 +3,7 @@ import axios from 'axios'
 import ComicClanContext from './comicClanContext'
 import ComicClanReducer from './comicClanReducer'
 import {
-    SEARCH_BOOKS, GET_BOOK, CHANGE_CATEGORY, SET_LOADING, GET_GROUPS
+    SEARCH_BOOKS, GET_BOOK, CHANGE_CATEGORY, SET_LOADING, GET_GROUPS, TOGGLE_MENU
 } from '../types'
 
 const ComicClanState = props => {
@@ -12,12 +12,12 @@ const ComicClanState = props => {
         currentBook: {},
         category: 'year',
         groups: [],
-        loading: false
+        loading: false,
+        menu: false
     }
 
     const [state, dispatch] = useReducer(ComicClanReducer, initialState)
 
-    // search books
     const searchBooks = async (text) => {
         setLoading()
         let url = text ? `https://comicclan.vett.io/comics?q=${
@@ -31,7 +31,6 @@ const ComicClanState = props => {
         })
     }
 
-    // change category
     const changeCategory = async (category = 'year') => {
         setLoading()
         getGroups(category, state.books)
@@ -42,7 +41,6 @@ const ComicClanState = props => {
         })
     }
 
-    // get groups
     const getGroups = (category, books) => {
         const groups = category === "random" ? []
             : [...new Set(books.map(b => b[category]))]
@@ -54,7 +52,6 @@ const ComicClanState = props => {
         })
     }
 
-    // get book
     const getBook = (name) => {
         setLoading()
         let book = state.books.find(b => b.name.includes(name))
@@ -64,7 +61,15 @@ const ComicClanState = props => {
         })
     }
 
-    // set loading
+    const toggleMenu = () => {
+        setLoading()
+        let menu = !state.menu
+        dispatch({
+            type: TOGGLE_MENU,
+            payload: menu
+        })
+    }
+
     const setLoading = () => dispatch({ type: SET_LOADING })
 
     return <ComicClanContext.Provider
@@ -74,9 +79,11 @@ const ComicClanState = props => {
             category: state.category,
             groups: state.groups,
             loading: state.loading,
+            menu: state.menu,
             searchBooks,
             changeCategory,
-            getBook
+            getBook,
+            toggleMenu
         }}>
         {props.children}
     </ComicClanContext.Provider>
