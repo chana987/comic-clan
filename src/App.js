@@ -7,7 +7,6 @@ import {
   Switch,
   Route
 } from "react-router-dom"
-import book from './assets/book.png'
 import logo from './assets/logo.png'
 import ComicClanState from './context/comicClan/comicClanState'
 
@@ -16,7 +15,6 @@ function App() {
     <ComicClanState>
       <Router>
         <header>
-          <img src={book} alt="" className="logo-icon" />
           <img src={logo} alt="" className="logo" />
         </header>
         <div className="app">

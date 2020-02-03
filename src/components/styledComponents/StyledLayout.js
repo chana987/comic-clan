@@ -37,4 +37,5 @@ export const StarGrid = styled.div`
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 0.4rem;
     padding-left: 2rem;
+    margin-bottom: 2rem;
 `

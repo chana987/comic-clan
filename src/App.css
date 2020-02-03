@@ -22,12 +22,7 @@ header {
 }
 
 .logo {
-    padding: 2rem 1rem;
-}
-
-.logo-icon {
-    padding: 1.8rem;
-    padding-right: 0;
+    margin: 1.5rem 1rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -41,7 +36,8 @@ header {
         font-size: 10px;
     }
 
-    .logo, .logo-icon {
-        height: 1.5rem;
+    .logo {
+        height: 2rem;
+        padding: 0.3rem;
     }
 }

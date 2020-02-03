@@ -1,4 +1,4 @@
-# ComicClan - React Webapp Specification
+# ComicClan - React Webapp
 
 ### Description
 
