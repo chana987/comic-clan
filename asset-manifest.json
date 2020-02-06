@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/comic-clan/static/css/main.0d1bcda1.chunk.css",
+    "main.js": "/comic-clan/static/js/main.064ac5e9.chunk.js",
+    "main.js.map": "/comic-clan/static/js/main.064ac5e9.chunk.js.map",
+    "runtime-main.js": "/comic-clan/static/js/runtime-main.8ad616e9.js",
+    "runtime-main.js.map": "/comic-clan/static/js/runtime-main.8ad616e9.js.map",
+    "static/js/2.f0491468.chunk.js": "/comic-clan/static/js/2.f0491468.chunk.js",
+    "static/js/2.f0491468.chunk.js.map": "/comic-clan/static/js/2.f0491468.chunk.js.map",
+    "index.html": "/comic-clan/index.html",
+    "precache-manifest.91ad89b6450bda9757f13426617bd867.js": "/comic-clan/precache-manifest.91ad89b6450bda9757f13426617bd867.js",
+    "service-worker.js": "/comic-clan/service-worker.js",
+    "static/css/main.0d1bcda1.chunk.css.map": "/comic-clan/static/css/main.0d1bcda1.chunk.css.map",
+    "static/js/2.f0491468.chunk.js.LICENSE": "/comic-clan/static/js/2.f0491468.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8ad616e9.js",
+    "static/js/2.f0491468.chunk.js",
+    "static/css/main.0d1bcda1.chunk.css",
+    "static/js/main.064ac5e9.chunk.js"
+  ]
+}
