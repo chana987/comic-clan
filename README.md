@@ -4,6 +4,10 @@
 
 An online library of comic books for ComicClan, an online community of comic book enthusiasts. The library represents the combined collection of comic books owned by the community members.
 
+Format: ![Catalog]('./src/assets/comic-clan-1.png')
+
+Format: ![Book Details]('./src/assets/comic-clan-2.png')
+
 ### Setup
 
 - Run ```npm install```.
@@ -30,4 +34,4 @@ An online library of comic books for ComicClan, an online community of comic boo
 - Axios
 - React-Router-Browser
 
-The [Vett.io](https://vett.io) Team.
+Designed by the [Vett.io](https://vett.io) Team.
